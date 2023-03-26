@@ -10,6 +10,9 @@ export class DiretivasAtributosComponent implements OnInit{
   public valor: boolean = true;
   public height: string = "20px";
   public backgroundColor: string = "blue";
+
+  public nome: string = "";
+  public list: Array<{nome: string}> = [];
   constructor() { }
 
   ngOnInit(): void {
@@ -30,5 +33,10 @@ export class DiretivasAtributosComponent implements OnInit{
       }
 
     }, 2000);
+  }
+
+  public salvar(){
+    this.list.push({nome: this.nome});
+    this.nome = "";
   }
 }
