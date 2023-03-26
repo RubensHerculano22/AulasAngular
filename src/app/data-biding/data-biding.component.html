@@ -13,4 +13,18 @@
 <h2>Property Binding</h2>
 <button [disabled]="checkedDisabled">Button</button>
 <br/>
-<img [src]="imgScr" [title]="imgTitle" [alt]="imgTitle"/>
+<img [src]="imgScr" [title]="imgTitle" [alt]="imgTitle" style="width: 300px;"/>
+
+<br/>
+<br/>
+
+<h2>Event Binding</h2>
+<button (click)="alertaInfo($event)">Evento</button>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background: red; width: 300px; height: 300px;"></div>
+
+{{position.x}} - {{position.y}}
+<br/>
+<br/>
+
+<hr>

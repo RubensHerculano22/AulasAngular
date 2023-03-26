@@ -15,11 +15,18 @@ export class DataBidingComponent implements OnInit{
   public imgScr: string = "https://images2.alphacoders.com/279/279072.jpg";
   public imgTitle: string = "Mario Party";
 
-  constructor() {
+  public position: {x: number, y:number} = {x: 0, y: 0}
 
+  constructor() { }
+
+  ngOnInit(): void { }
+
+  public alertaInfo(valor: MouseEvent) {
+    console.log(valor)
   }
 
-  ngOnInit(): void {
-
+  public mouseMoveTeste(valor: MouseEvent) {
+    this.position.x = valor.offsetX;
+    this.position.y = valor.offsetY;
   }
 }
