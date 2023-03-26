@@ -1,11 +1,11 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit, OnChanges{
+export class TitleComponent implements OnInit, OnChanges, OnDestroy{
   @Input() public title:string = "Bem Vindo";
   //Input recebe do atributo na chamada no valor.
 
@@ -15,5 +15,9 @@ export class TitleComponent implements OnInit, OnChanges{
 
   ngOnChanges(): void {
     console.log("Foi alterado com sucesso");
+  }
+
+  ngOnDestroy(): void {
+    console.log("Deu bom ele foi destruido!");
   }
 }
