@@ -3,13 +3,19 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
+    {{valor}}
+    <button (click)="adicionar()">Adicionar</button>
     <router-outlet></router-outlet>
-    <app-title title="Olá Mundo"></app-title>
   `
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked{
   //public title = 'Bem Vindo'; Variavel para mostrar na tela(app.component.html)
+  public valor: number = 1;
   constructor() {}
+
+  public adicionar(): number {
+    return this.valor += 1;
+  }
 
   ngOnInit(): void {
     // setTimeout(() => {
