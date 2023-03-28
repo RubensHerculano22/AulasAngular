@@ -1,23 +1,15 @@
 {
   "list-food": [
     {
-      "id": 1,
-      "nome": "Alface"
+      "nome": "Salada",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Tomate"
+      "nome": "Tomate 2",
+      "id": 2
     },
     {
-      "id": 3,
-      "nome": "Pepino"
-    },
-    {
-      "nome": "Cenoura",
-      "id": 4
-    },
-    {
-      "nome": "Beringela",
+      "nome": "Batata",
       "id": 5
     }
   ]
